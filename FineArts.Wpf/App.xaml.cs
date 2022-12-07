@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FineArts.Bll;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +14,11 @@ namespace FineArts.Wpf
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            TeacherService.SeedData();
+            base.OnStartup(e);
+        }
     }
+    
 }
