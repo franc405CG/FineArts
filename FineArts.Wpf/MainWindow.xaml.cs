@@ -32,11 +32,11 @@ namespace FineArts.Wpf
 
         private void teacherList_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
-            Teacher? selecteTeacher = teacherList.SelectedItem as Teacher;
+            Teacher? selectedTeacher = teacherList.SelectedItem as Teacher;
             TeacherService teacherService = new();
-            if (selecteTeacher != null)
+            if (selectedTeacher != null)
             {
-                studentList.DataContext = teacherService.GetStudentsByTeacherId(selecteTeacher.Id);
+                studentList.DataContext = teacherService.GetStudentsByTeacherId(selectedTeacher.Id);
             }
         }
     }
