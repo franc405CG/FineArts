@@ -20,7 +20,7 @@
     <Grid>
         <ComboBox x:Name="teacherList" Height="23" HorizontalAlignment="Stretch"
                   Margin="40,16,42,0" VerticalAlignment="Top" Width="Auto" IsSynchronizedWithCurrentItem="True" 
-                  ItemsSource="{Binding}" ItemTemplate="{StaticResource classTemplate}"/>
+                  ItemsSource="{Binding}" ItemTemplate="{StaticResource classTemplate}" SelectionChanged="teacherList_SelectionChanged"/>
 
         <ListView x:Name="studentList" Height="Auto" HorizontalAlignment="Stretch" Margin="40,44,40,60" VerticalAlignment="Stretch" 
                   Width="Auto" IsSynchronizedWithCurrentItem="true" ItemsSource="{Binding}">
